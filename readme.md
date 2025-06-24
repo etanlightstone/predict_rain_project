@@ -1,0 +1,1 @@
+This project is a sample ML model that is trained to predict if its raining or not.
