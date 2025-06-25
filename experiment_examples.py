@@ -15,7 +15,7 @@ BASELINE_EXPERIMENT = [
     "--batch_size", "32"
 ]
 
-# Example 2: Medium model with early stopping
+# Example 2: Medium model with early stopping (with MLflow tracking)
 MEDIUM_EXPERIMENT = [
     "python", "train.py",
     "--model_type", "medium",
@@ -25,6 +25,19 @@ MEDIUM_EXPERIMENT = [
     "--early_stopping",
     "--patience", "15",
     "--use_scheduler"
+]
+
+# Example 2b: Same as above but without MLflow tracking
+MEDIUM_EXPERIMENT_NO_MLFLOW = [
+    "python", "train.py",
+    "--model_type", "medium",
+    "--epochs", "100",
+    "--learning_rate", "0.001",
+    "--batch_size", "64",
+    "--early_stopping",
+    "--patience", "15",
+    "--use_scheduler",
+    "--no_mlflow"
 ]
 
 # Example 3: Large model with regularization
